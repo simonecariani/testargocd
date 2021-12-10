@@ -48,8 +48,6 @@ spec:
             routes:
             - primary
       steps:
-      - setWeight: 10
-      - pause: {}         # pause indefinitely
       - setWeight: 20
       - pause: {duration: 20s}
       - setWeight: 30
