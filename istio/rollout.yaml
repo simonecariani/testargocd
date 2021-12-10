@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: istio-rollout
-        image: argoproj/rollouts-demo:orange
+        image: argoproj/rollouts-demo:blue
         ports:
         - name: http
           containerPort: 8080
@@ -29,9 +29,7 @@ spec:
     canary:
       canaryService: istio-rollout-canary
       stableService: istio-rollout-stable
-      # analysis will be performed in background, while rollout is progressing through its steps
-      analysis:
-        startingStep: 1   # index of step list, of when to start this analysis
+      # analysis will be performed in background, while rollout is progressing through its step
       trafficRouting:
         istio:
           virtualService:
