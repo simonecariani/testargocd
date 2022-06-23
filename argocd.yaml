@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: guestbook
+  name: test
   namespace: argocd
 spec:
   project: default
@@ -11,7 +11,7 @@ spec:
     path: istio
   destination:
     server: https://kubernetes.default.svc
-    namespace: guestbook
+    namespace: test
   
   syncPolicy:
     syncOptions:
@@ -20,4 +20,3 @@ spec:
     automated:
       selfHeal: true
       prune: true
-
